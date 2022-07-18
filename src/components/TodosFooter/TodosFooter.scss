@@ -1,0 +1,52 @@
+.todos-footer {
+    display: flex;
+    font-size: 12px;
+    padding: 10px 0;
+
+    .counter {
+        display: inline-flex;
+        flex: 1;
+        padding: 10px 15px 10px 5px;
+        justify-content: left;
+    }
+
+    .options {
+        display: inline-flex;
+        flex: 1;
+
+        .selectAll {
+            padding: 10px;
+            cursor: pointer;
+
+            &.active {
+                border: 1px solid #fff;
+            }
+        }
+
+        .selectActive {
+            padding: 10px;
+            cursor: pointer;
+
+            &.active {
+                border: 1px solid #fff;
+            }
+        }
+
+        .selectCompleted {
+            padding: 10px;
+            cursor: pointer;
+
+            &.active {
+                border: 1px solid #fff;
+            }
+        }
+    }
+
+    .clearCompleted {
+        display: inline-flex;
+        flex: 1;
+        padding: 10px 5px 10px 15px;
+        justify-content: right;
+        cursor: pointer;
+    }
+}

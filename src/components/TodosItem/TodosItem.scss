@@ -1,0 +1,30 @@
+.todos-item {
+    max-width: 100%;
+    border: 1px solid #364053;
+    text-align: left;
+    display: flex;
+
+    .completed {
+        display: inline-flex;
+        width: 5%;
+    }
+
+    .value {
+        display: inline-flex;
+        width: 90%;
+        background: none;
+        border: none;
+        color: #999;
+
+        &.completed {
+            text-decoration: line-through
+        }
+    }
+
+    .delete {
+        text-align: center;
+        display: inline-flex;
+        width: 5%;
+        cursor: pointer;
+    }
+}
