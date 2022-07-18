@@ -2,6 +2,7 @@ import axios from "axios";
 import TodosConfig from "../../configs/TodosConfig";
 
 export default class ApiClient {
+
     static async getItemsList(publisherId, todosType) {
         try {
             const response = await axios.get(`${TodosConfig.API_HOST}${TodosConfig.API_GET_ALL}${publisherId}${TodosConfig.API_TODOS_TYPE}${todosType}`);
@@ -75,16 +76,12 @@ export default class ApiClient {
     }
 
     static async updateTodo(e, todo, type) {
-        switch (type) {
-            case 'value':
-                this.updateTodoValue(e,todo);
-                break;
-            case 'complete':
-                this.updateTodoComplete(e, todo)
-                break;
-            default:
-        } 
-        
+        const TODOS_UPDATE_TYPE = {
+            'value': this.updateTodoValue,
+            'complete': this.updateTodoComplete,
+        }
+
+        TODOS_UPDATE_TYPE[type](e, todo);
     }
 
     static async updateTodoComplete(e, todo) {
