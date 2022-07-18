@@ -20,8 +20,8 @@ export default class ApiClient {
             const response = await axios.post(`${TodosConfig.API_HOST}${TodosConfig.API_REMOVE}`, { id: e.currentTarget.getAttribute("name"), publisherId: publisherId });
             
             return response?.data;
-        } catch (err) {
-            console.error(err);
+        } catch (error) {
+            console.error(error);
         }
 
         return {}
@@ -67,8 +67,8 @@ export default class ApiClient {
             const response = await axios.post(`${TodosConfig.API_HOST}${TodosConfig.API_REMOVE_ALL_COMPLETED}`, { publisherId: publisherId });
             
             return response?.data;
-        } catch (err) {
-            console.error(err);
+        } catch (error) {
+            console.error(error);
         }
 
         return {};
@@ -89,8 +89,8 @@ export default class ApiClient {
             const response = await axios.post(`${TodosConfig.API_HOST}${TodosConfig.API_UPDATE}`,{ publisherId: todo.publisherId, value:todo.value, id: todo._id, completed: !todo.completed });
 
             return response?.data;
-        }catch (err) {
-            console.error(err);
+        }catch (error) {
+            console.error(error);
         }
 
         return {};
@@ -103,8 +103,8 @@ export default class ApiClient {
             const response = await axios.post(`${TodosConfig.API_HOST}${TodosConfig.API_UPDATE}`,{ publisherId: todo.publisherId, id: todo._id, completed: todo.completed, value: value });
 
             return response?.data;
-        }catch (err) {
-            console.error(err);
+        }catch (error) {
+            console.error(error);
         }
 
         return {};
