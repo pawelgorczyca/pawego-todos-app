@@ -7,7 +7,7 @@ export default class ApiClient {
         try {
             const response = await axios.get(`${TodosConfig.API_HOST}${TodosConfig.API_GET_ALL}${publisherId}${TodosConfig.API_TODOS_TYPE}${todosType}`);
             
-            return response?.data?.allTodos;
+            return response?.data?.data;
         } catch(error) {
             console.error(error);
         }
