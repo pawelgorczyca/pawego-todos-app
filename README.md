@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Getting Started with PAWEGO TODOS APP
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Before start
+You must install *pawego-todos-api* and run it on http://localhost:4000
 
 ## Available Scripts
 
