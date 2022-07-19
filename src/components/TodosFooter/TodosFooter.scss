@@ -14,27 +14,13 @@
         display: inline-flex;
         flex: 1;
 
-        .selectAll {
+        .selectAll, .selectActive, .selectCompleted {
             padding: 10px;
             cursor: pointer;
-
-            &.active {
-                border: 1px solid #fff;
-            }
-        }
-
-        .selectActive {
-            padding: 10px;
-            cursor: pointer;
-
-            &.active {
-                border: 1px solid #fff;
-            }
-        }
-
-        .selectCompleted {
-            padding: 10px;
-            cursor: pointer;
+            display: inline-flex;
+            flex: 1;
+            margin: 0 5px;
+            justify-content: center;
 
             &.active {
                 border: 1px solid #fff;
